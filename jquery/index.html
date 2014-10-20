@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<title>Alexandria: The COSI Library</title>
+	<style>
+	input.test{ /* default styling for input without id */
+		font-weight: bold;
+	}
+	#search-div{ /* styling for search divider */
+		margin: 0;
+		position: absolute;
+		top: 48%;
+		left: 50%;
+	}
+	#search-form { /* styling for actual search id */
+		position: relative;
+		left: -50%;
+	}
+	#cover-div{ /* styling for image divider */
+		margin: 0;
+		position: absolute;
+		top: 5%;
+		left: 50%;
+	}
+	#alexandria-cover{ /* styling for actual image within divider */
+		position: relative;
+		left: -22%;
+	}
+	</style>
+</head>
+<body>
+	<script src="jquery.js"></script>
+	<div id="cover-div">
+		<img id="alexandria-cover" src="alexandria.png" alt="Alexandria Search Image" style="width:40%;height:40%">
+	</div>
+	<div id="search-div">
+	<form id="search-form">
+		<input type ="text" />
+		<input type="submit"value="Search"  />
+	</form>
+	</div>
+	<script>
+		$( "#search-form" ).submit( function(){
+			console.log("Hi")
+		});		
+	</script>
+</body>
+</html>
