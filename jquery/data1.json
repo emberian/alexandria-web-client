@@ -1,0 +1,10 @@
+{
+name:"Advanced Linear Algebra",
+description: "A surprisingly good book actually, containing lots of good tidb    its about linears and algebras",
+isbn: "978-3-16-148410-0", 
+cover_image: "I am a PNG data url!",
+available: 1,
+quantity: 99,
+active_date: "06/22/1999",
+permission: "Administrator"
+}
