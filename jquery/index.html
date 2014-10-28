@@ -5,7 +5,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alexandria: The COSI Library</title>
-	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
 	<style>
 		#cover {
 			width: 200px;
@@ -33,20 +33,13 @@
 <body>
 	<script src="/static/js/jquery.js"></script>
 	<script src="/static/js/bootstrap.min.js"></script>
-	<script src="/static/js/bootstrap-table.min.css"></script>
 	<div style="transform: translate(0, 50%)">
 		<img class="center" src="/static/images/alexandria.png" id="cover"/>
 		<form class="center" id="search-form">
-			<input type="text" placeholder="Enter a book's title, author, or ISBN..." style="width:30em"/>
-			<input type="submit" value="Search" />
+			<input type="text" id="search-field" placeholder="Enter a book's title, author, or ISBN..." style="width:30em"/>
+			<input type="button" id="search-button"value="Search" />
 		</form>
 	</div>
-	<script>
-		$( "#search-form" ).submit( function(){
-			console.log("Hi");
-			return false;
-		});
-	</script>
-
+	<script src="/static/js/alexandria.js"></script>
 </body>
 </html>
