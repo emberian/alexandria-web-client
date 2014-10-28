@@ -33,6 +33,11 @@
 <body>
 	<script src="/static/js/jquery.js"></script>
 	<script src="/static/js/bootstrap.min.js"></script>
+	<script>
+	$.ajaxSetup({
+		cache: false;
+	});
+	</script>
 	<div style="transform: translate(0, 50%)">
 		<img class="center" src="/static/images/alexandria.png" id="cover"/>
 		<form class="center" id="search-form">
