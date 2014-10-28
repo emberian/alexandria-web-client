@@ -34,5 +34,9 @@ def index():
     return open("index.html").read()
     #app.send_static_file("index.html")
 
+@app.route("/")
+def root():
+    return index()
+
 if __name__ == "__main__":
     app.run(debug = True)
