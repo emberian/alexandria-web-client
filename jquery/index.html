@@ -31,11 +31,11 @@
 </head>
 
 <body>
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/bootstrap-table.min.css"></script>
+	<script src="/static/js/jquery.js"></script>
+	<script src="/static/js/bootstrap.min.js"></script>
+	<script src="/static/js/bootstrap-table.min.css"></script>
 	<div style="transform: translate(0, 50%)">
-		<img class="center" src="images/alexandria.png" id="cover"/>	
+		<img class="center" src="/static/images/alexandria.png" id="cover"/>
 		<form class="center" id="search-form">
 			<input type="text" placeholder="Enter a book's title, author, or ISBN..." style="width:30em"/>
 			<input type="submit" value="Search" />
@@ -45,7 +45,7 @@
 		$( "#search-form" ).submit( function(){
 			console.log("Hi");
 			return false;
-		});             
+		});
 	</script>
 
 </body>
