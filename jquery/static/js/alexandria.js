@@ -18,7 +18,7 @@ function drawRow(rowData) {
     row.append($("<td>" + rowData.permission + "</td>"));
 }
 
-$( "#search-button" ).click( function(){
+$( "#search-form" ).submit( function(){
  	console.log("This is a console printing test!");
  	$.get("/search?q=" + $("#search-field").val())
 	.done(function(data){
