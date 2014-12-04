@@ -1,3 +1,4 @@
+//drawTable: a loop that will sequentially feed drawRow with the proper data
 function drawTable(data) {
     //data=JSON.parse(data);
     for (var i = 0; i < data.data.length; i++) {
@@ -6,6 +7,7 @@ function drawTable(data) {
     }
 }
 
+//drawRow: retrieves data from drawTable, and constructs a visual row out of it
 function drawRow(rowData) {
     var row = $("<tr />")
         $("#bookTable").append(row);
@@ -19,8 +21,9 @@ function drawRow(rowData) {
     row.append($("<td>" + rowData.permission + "</td>"));
 }
 
+//this function runs upon submission of search
 $( "#search-form" ).submit( function(){
-    console.log("This is a console printing test!");
+    //console.log("This is a console printing test!");
     //$.get("/api/v1/search?q=" + $("#search-field").val())
     $.get("/api/v1/book")
         .done(function(data){
