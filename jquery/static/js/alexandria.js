@@ -43,7 +43,7 @@ $( "#search-form" ).submit( function(){
     	.done(function(data){
         	$("body").empty();
         	$("body").append($("<table class=\"table table-striped table-bordered\" id=\"bookTable\"></table>"))
-        	drawTable(data);
+        	drawRow(data.data);
         })
 
     	.fail(function(data){
