@@ -18,7 +18,7 @@ function drawRow(rowData) {
     row.append($("<td>" + rowData.available + 1 + "</td>"));
     row.append($("<td>" + rowData.quantity + 1 + "</td>"));
     //row.append($("<td>" + rowData.active_date + "</td>"));
-    row.append($("<td>" + rowData.permission + "</td>"));
+    //row.append($("<td>" + rowData.permission + "</td>"));
 }
 
 //this function runs upon submission of search
