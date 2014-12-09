@@ -2,11 +2,11 @@
 <html>
 <head>
 	<meta charset="utf-8" />
-	//IE functionality fix
+	<!-- IE functionality fix -->
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Alexandria: The COSI Library</title>
-	<link href="/static/css/bootstrap.min.css" rel="stylesheet">
+	<link href="static/css/bootstrap.min.css" rel="stylesheet">
 	<style>
 		#cover {
 			width: 200px;
@@ -32,18 +32,45 @@
 </head>
 
 <body>
-	<script src="/static/js/jquery.js"></script>
-	<script src="/static/js/bootstrap.min.js"></script>
+	<!-- load jquery -->
+	<script src="static/js/jquery.js"></script>
+	<!-- load bootstrap -->
+	<script src="static/js/bootstrap.min.js"></script>
 	<script>
-	//IE functionality fix
+	<!-- IE functionality fix -->
 	$.ajaxSetup({
-		cache: false;
+		cache: false
 	});
 	</script>
+
+
+<div class="navbar navbar-inverse" role="navigation">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle Nav</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Alexandria Search</a>
+        </div>
+        <div class="navbar-collapse collapse">
+          <ul class="nav navbar-nav">
+            <li class="Back"><a href="index.html">Back</a></li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </div>
+
+
+
+
+	<!-- Style and Logic stuff for search bar -->
 	<div style="transform: translate(0, 50%)">
 		<img class="center" src="/static/images/alexandria.png" id="cover"/>
 		<form class="center" id="search-form">
-			<input type="text" id="search-field" placeholder="Enter a book's title, author, or ISBN..." style="width:30em"/>
+			<input type="text" id="search-field" placeholder="Enter a book title or ISBN..." style="width:30em"/>
 			<input type="submit" id="search-button"value="Search" />
 		</form>
 	</div>

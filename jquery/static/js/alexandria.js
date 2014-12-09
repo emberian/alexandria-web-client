@@ -24,8 +24,9 @@ function drawRow(rowData) {
 //this function runs upon submission of search
 $( "#search-form" ).submit( function(){
     //console.log("This is a console printing test!");
+    $.get("/api/v1/book/search?q=" + $("#search-field").val())
     //$.get("/api/v1/search?q=" + $("#search-field").val())
-    $.get("/api/v1/book")
+    //$.get("/api/v1/book")
         .done(function(data){
             $("body").empty();
             $("body").append($("<table class=\"table table-striped table-bordered\" id=\"bookTable\"></table>"))
@@ -36,4 +37,9 @@ $( "#search-form" ).submit( function(){
         alert("Connection to API Server Failed!");
     });
     return false;
+});
+
+$( ".Back" ).click(function(){
+	location.reload();
+	
 });
