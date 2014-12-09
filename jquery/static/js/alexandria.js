@@ -21,8 +21,31 @@ function drawRow(rowData) {
     row.append($("<td>" + rowData.permission + "</td>"));
 }
 
+//statusBar: plops a statusbar on the page when called
+function statusBar(){
+   <div class="navbar navbar-inverse" role="navigation">
+     <div class="container">
+       <div class="navbar-header">
+         <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+           <span class="sr-only">Toggle Nav</span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+         <a class="navbar-brand" href="#">Alexandria</a>
+       </div>
+       <div class="navbar-collapse collapse">
+         <ul class="nav navbar-nav">
+           <li class="Back"><a href="index.html">Back</a></li>
+         </ul>
+       </div><!--/.nav-collapse -->
+     </div>
+   </div>
+}	
+
 //this function runs upon submission of search
 $( "#search-form" ).submit( function(){
+    statusBar();
     //console.log("This is a console printing test!");
     $.get("/api/v1/book/search?q=" + $("#search-field").val())
     //$.get("/api/v1/search?q=" + $("#search-field").val())
@@ -36,7 +59,7 @@ $( "#search-form" ).submit( function(){
     .fail(function(data){
         alert("Connection to API Server Failed!");
     });
-    return false;
+    //return false;
 });
 
 $( ".Back" ).click(function(){
